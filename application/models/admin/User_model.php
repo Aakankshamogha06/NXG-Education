@@ -7,7 +7,7 @@
 		}
 
 		public function get_all_users(){
-			$query = $this->db->query("SELECT *,(SELECT role_name FROM `role` where id=is_admin) as role_name  FROM `users`;");
+			$query = $this->db->query("SELECT *,(SELECT role_name FROM `role` where role.id=users.is_admin) as is_admin  FROM `users`;");
 			return $result = $query->result_array();
 		}
 

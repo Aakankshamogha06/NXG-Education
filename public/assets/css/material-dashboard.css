@@ -1418,7 +1418,8 @@ progress {
 
   .col-md-8 {
     flex: 0 0 auto;
-    width: 66.666667%;
+    width: 70%;
+    margin: 0% 0% 0% 24%;
   }
 
   .col-md-9 {
@@ -3721,6 +3722,7 @@ fieldset:disabled .btn {
   --bs-btn-disabled-color: #000;
   --bs-btn-disabled-bg: #e91e63;
   --bs-btn-disabled-border-color: #e91e63;
+  margin-left:4% ;
 }
 
 .btn-secondary {
@@ -9628,7 +9630,8 @@ fieldset:disabled .btn {
 
 .mb-3 {
   margin-bottom: 1rem !important;
-}
+  margin: 0% 4% 0% 4%;
+} 
 
 .mb-4 {
   margin-bottom: 1.5rem !important;
@@ -22680,7 +22683,7 @@ label,
 }
 
 .form-control {
-  border: none;
+  border: revert;
 }
 
 .form-control.is-invalid {
@@ -25836,6 +25839,7 @@ body:not(.dark-version) .sidenav.bg-transparent .collapse .nav-item .nav-link.ac
 }
 
 .table> :not(:first-child) {
+  text-align: center;
   border-top: 1px solid currentColor;
 }
 

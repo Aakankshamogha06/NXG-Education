@@ -61,3 +61,22 @@ $route['material-dashboard-master/(:any)'] = 'admin/material-dashboard-master/$1
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+// Admin Panel
+
+// Users
+$route['users/add_users'] = 'admin/users/add_users';
+$route['users/users_submit_data'] = 'admin/users/users_submit_data';
+$route['users/view_users']        = 'admin/users/users_view';
+$route['users/edit_users/(:any)'] = 'admin/users/users_edit/$1';
+$route['users/users_update_data'] = 'admin/users/users_update_data';
+$route['users/users_delete/(:any)'] = 'admin/users/users_delete/$1';
+
+// //Technical_analysis
+// $route['technical_analysis/add_technical_analysis'] = 'admin/technical_analysis/add_technical_analysis';
+// $route['technical_analysis/technical_analysis_submit_data'] = 'admin/technical_analysis/technical_analysis_submit_data';
+// $route['technical_analysis/view_technical_analysis']        = 'admin/technical_analysis/technical_analysis_view';
+// $route['technical_analysis/edit_technical_analysis/(:any)'] = 'admin/technical_analysis/technical_analysis_edit/$1';
+// $route['technical_analysis/technical_analysis_update_data'] = 'admin/technical_analysis/technical_analysis_update_data';
+// $route['technical_analysis/technical_analysis_delete/(:any)'] = 'admin/technical_analysis/technical_analysis_delete/$1';
