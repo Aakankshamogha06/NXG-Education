@@ -50,22 +50,6 @@
             <span class="nav-link-text ms-1">PERFORMANCE STATS</span>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-white active bg-gradient-primary" href="<?= base_url('admin/email_market_report'); ?>">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">email</i>
-            </div>
-            <span class="nav-link-text ms-1">EMAIL MARKET REPORT</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white active bg-gradient-primary" href="">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">launch</i>
-            </div>
-            <span class="nav-link-text ms-1">LAUNCHPAD</span>
-          </a>
-        </li>
       </ul>
     </div>
     </div>
