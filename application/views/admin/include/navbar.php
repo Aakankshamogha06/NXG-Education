@@ -41,6 +41,9 @@
             <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
           </ol>
           <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+          <div>
+          <span href="" onclick="toggleDiv()"><i class="fa fa-bars me-sm-1 ps-4"></i> </span>
+        </div>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -58,3 +61,13 @@
         </div>
       </div>
     </nav>
+    <script>
+function toggleDiv() {
+  var div = document.getElementById("sidenav-main");
+  if (div.style.display === "none") {
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+}
+</script>

@@ -4,7 +4,7 @@
       <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
         <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
           <div class="d-flex justify-content-between align-items-center px-3">
-            <h6 class="text-white text-capitalize">MARKET REPORT WEB COMPONENT</h6>
+            <h6 class="text-white text-capitalize">NEWSLETTER</h6>
             
           </div>
         </div>
@@ -12,18 +12,19 @@
       <div class="card-body px-0 pb-2">
         <div class="table-responsive p-0">
           <?php
-              $expiryDate = time() + (3 * 24 * 60 * 60);
+              $expiryDate = "1759356000";
               $brokerid = "898";
               $userid = "NXG-Markets";
               $accountType = "0";
               $secretKey = "b767-0407ab8";
               $reportid = "926";
-              $token = md5("${userid}|${accountType}|${expiryDate}${secretKey}");
-              $autochartistURL = "https://reports.autochartist.com/mr/?";
-              $autochartistURL .= "broker_id=$brokerid&rid=$reportid&demo=$accountType&token=$token";
-              $autochartistURL .= "&expire=$expiryDate&locale=en_GB&user=$userid";
+            //   $token = md5("${userid}|${accountType}|${expiryDate}${secretKey}");
+              $token = "186c5230aa31539b6560a2ddb0596162";
+              $autochartistURL = "https://reports.autochartist.com/signup/market-reports?";
+              $autochartistURL .= "bid=$brokerid&user=email&demo=0&locale=en&expire=$expiryDate&token=$token";
             ?>
-            
+            <!-- https://reports.autochartist.com/signup/market-reports?bid=898&user=email&demo=0&
+            locale=en&expire=1759356000&token=186c5230aa31539b6560a2ddb0596162 -->
             <iframe  class="mg" src="<?= $autochartistURL ?>"></iframe>
         </div>
       </div>

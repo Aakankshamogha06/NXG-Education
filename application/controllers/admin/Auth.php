@@ -53,7 +53,43 @@ class Auth extends CI_Controller
 			$this->load->view('admin/auth/login');
 		}
 	}
-
+	public function register()
+	{
+		if ($this->input->post('submit')) {
+				$this->form_validation->set_rules('firstname', 'Firstname', 'trim|required');
+				$this->form_validation->set_rules('lastname', 'Lastname', 'trim|required');
+				$this->form_validation->set_rules('email', 'Email', 'trim|required');
+				$this->form_validation->set_rules('mobile_no', 'Number', 'trim|required');
+				$this->form_validation->set_rules('password', 'Password', 'trim|required');
+				$this->form_validation->set_rules('user_role', 'User Role', 'trim|required');
+			if ($this->form_validation->run() == FALSE) {
+				$this->load->view('admin/auth/register');
+			} else {
+				$data = array(
+					'username' => $this->input->post('firstname').' '.$this->input->post('lastname'),
+					'firstname' => $this->input->post('firstname'),
+					'lastname' => $this->input->post('lastname'),
+					'email' => $this->input->post('email'),
+					'mobile_no' => $this->input->post('mobile_no'),
+					'password' =>  password_hash($this->input->post('password'), PASSWORD_BCRYPT),
+					'is_admin' => $this->input->post('user_role'),
+					'created_at' => date('Y-m-d : h:m:s'),
+					'updated_at' => date('Y-m-d : h:m:s'),
+				);
+					$result = $this->auth_model->register($data);
+	
+				if ($result) {
+					redirect('admin/auth/login');
+				} else {
+					$data['msg'] = 'Registration failed!';
+					$this->load->view('admin/auth/register', $data);
+				}
+			}
+		} else {
+			$this->load->view('admin/auth/register');
+		}
+	}
+	
 	public function change_pwd()
 	{
 		$id = $this->session->userdata('admin_id');

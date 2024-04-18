@@ -64,6 +64,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 // Admin Panel
+$route['admin/auth/register'] = 'admin/auth/register';
 
 // Users
 $route['users/add_users'] = 'admin/users/add_users';
@@ -80,3 +81,11 @@ $route['users/users_delete/(:any)'] = 'admin/users/users_delete/$1';
 // $route['technical_analysis/edit_technical_analysis/(:any)'] = 'admin/technical_analysis/technical_analysis_edit/$1';
 // $route['technical_analysis/technical_analysis_update_data'] = 'admin/technical_analysis/technical_analysis_update_data';
 // $route['technical_analysis/technical_analysis_delete/(:any)'] = 'admin/technical_analysis/technical_analysis_delete/$1';
+
+
+/* API */
+$route['api/register'] = 'api/User/register';
+$route['api/login'] = 'api/User/login';
+$route['api/logout'] = 'api/User/logout';
+$route['reGenToken'] = 'api/Token/reGenToken';
+$route['market_report_api/generate_url'] = 'market_report_api/generate_url_get';
